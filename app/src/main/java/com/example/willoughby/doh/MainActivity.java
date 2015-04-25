@@ -22,6 +22,8 @@ public class MainActivity extends Activity {
         mDohWebView.getSettings().setJavaScriptEnabled(true);
         mDohWebView.getSettings().setAllowFileAccess(true);
         //mDohWebView.loadUrl("file:///android_assets/html/test.html");
+        loadData("html/index.html");
+        /*
         loadData("doh/javascript/third_party/jquery-1.8.2.js");
         loadData("doh/javascript/third_party/2.5.3-crypto-sha1-hmac-pbkdf2.js");
         loadData("doh/javascript/third_party/2.5.3-crypto-md5.js");
@@ -31,6 +33,7 @@ public class MainActivity extends Activity {
         loadData("doh/javascript/doh_ui.js");
         loadData("doh/domain_specs.js");
         loadData("doh/html/index.html");
+        */
     }
 
     private void loadData(String url) {
