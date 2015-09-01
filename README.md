@@ -6,7 +6,7 @@
   git submodule update --init --recursive
 ```
 
-With Node.js installed, run the following one liner from the root of your Polymer Starter Kit download:
+With Node.js installed, run the following from the root of your poly-doh directory:
 
 ```sh
 cd poly-doh
