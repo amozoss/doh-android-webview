@@ -11,6 +11,6 @@ With Node.js installed, run the following from the root of your poly-doh directo
 ```sh
 cd poly-doh
 npm install -g gulp bower && npm install && bower install
-gulp --android # Copies a new dist into App's assets (Must be in poly-doh directory)
+gulp --android # Builds a new dist into App's assets (Must be in poly-doh directory)
 ```
 
