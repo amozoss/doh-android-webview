@@ -11,6 +11,6 @@ With Node.js installed, run the following one liner from the root of your Polyme
 ```sh
 cd poly-doh
 npm install -g gulp bower && npm install && bower install
+gulp --android # Copies a new dist into App's assets (Must be in poly-doh directory)
 ```
 
-See poly-doh's README on how to compile dist
