@@ -20,9 +20,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         mDohWebView = (WebView)findViewById(R.id.activity_main_doh_webview);
         mDohWebView.getSettings().setJavaScriptEnabled(true);
+        mDohWebView.getSettings().setAllowFileAccessFromFileURLs(true);  // Enable HTML Imports to access file://.
         mDohWebView.getSettings().setAllowFileAccess(true);
-        //mDohWebView.loadUrl("file:///android_assets/html/test.html");
-        loadData("html/index.html");
+        mDohWebView.loadUrl("file:///android_asset/dist/index.html");
+        //loadData("dist/index.html");
         /*
         loadData("doh/javascript/third_party/jquery-1.8.2.js");
         loadData("doh/javascript/third_party/2.5.3-crypto-sha1-hmac-pbkdf2.js");
@@ -40,6 +41,16 @@ public class MainActivity extends Activity {
         // can only load one file at a time this way, so it doesn't work
         mDohWebView.loadDataWithBaseURL("file:///android_assets/", getAssetsFile(getBaseContext(), url), "text/html", "utf-8", null);
 
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if (mDohWebView.canGoBack()) {
+            mDohWebView.goBack();
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @Override

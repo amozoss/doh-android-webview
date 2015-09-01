@@ -1,3 +1,0 @@
-[submodule "doh_upstream"]
-	path = doh_upstream
-	url = git@github.com:onionjake/doh.git
